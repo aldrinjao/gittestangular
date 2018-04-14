@@ -1,18 +1,31 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
+import { NgModule,NO_ERRORS_SCHEMA} from '@angular/core';
+import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 
 import { AppComponent } from './app.component';
+import { UnavbarComponent } from './unavbar/unavbar.component';
+
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    UnavbarComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    LeafletModule.forRoot(),
+    MDBBootstrapModule.forRoot()
+
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [ NO_ERRORS_SCHEMA ]
+
 })
-export class AppModule { }
+export class AppModule {
+
+  
+  
+ }
